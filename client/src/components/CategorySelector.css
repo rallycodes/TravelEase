@@ -1,0 +1,9 @@
+.category-button {
+    /* Diğer stiller */
+    color: black; /* Varsayılan yazı rengi */
+}
+
+.category-button.selected {
+    color: white; /* Seçili olduğunda yazı rengi beyaz */
+    background-color: blue; /* Seçili butonun arka plan rengi */
+} 

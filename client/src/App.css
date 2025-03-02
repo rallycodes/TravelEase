@@ -1,0 +1,534 @@
+/* App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 4rem);
+}
+
+@media (min-width: 768px) {
+  .map-page {
+    flex-direction: row;
+  }
+}
+
+.map-container {
+  flex: 1;
+  min-height: 300px;
+}
+
+.sidebar {
+  width: 100%;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 400px;
+    max-height: 100%;
+  }
+}
+
+/* Country Info Styles */
+.category-button {
+  transition: all 0.2s ease;
+}
+
+.category-button:hover {
+  transform: translateY(-2px);
+}
+
+.restaurant-card, .transport-option, .event-card {
+  transition: all 0.2s ease;
+}
+
+.restaurant-card:hover, .transport-option:hover, .event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.country-tooltip {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* Chatbot animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Mobile compatibility */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  main {
+    flex-direction: column;
+  }
+  
+  .md\:w-1\/2 {
+    width: 100%;
+  }
+  
+  .h-\[70vh\] {
+    height: 50vh;
+  }
+}
+
+/* Map filter button styles */
+.map-filter-btn {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.map-filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.map-filter-btn.active {
+  background-color: #f59e0b !important;
+  color: white !important;
+}
+
+/* Yellow colored marker for high-rated places */
+.high-rated-marker {
+  background-color: #f59e0b;
+  border: 2px solid #d97706;
+}
+
+/* InfoWindow için ek stiller */
+.poi-rating, .poi-address, .poi-phone {
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.poi-hours {
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.poi-hours-summary {
+  cursor: pointer;
+  color: #3b82f6;
+  font-weight: 500;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.poi-hours-list {
+  margin: 5px 0 5px 10px;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+}
+
+.poi-hours-list li {
+  margin-bottom: 2px;
+}
+
+.poi-reviews {
+  margin-top: 12px;
+  border-top: 1px solid #eee;
+  padding-top: 8px;
+}
+
+.poi-reviews h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.review-author {
+  font-size: 12px;
+  margin: 0 0 2px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-text {
+  font-size: 12px;
+  margin: 0;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 1024px) {
+  .main-nav {
+    display: none;
+  }
+}
+
+/* POI İkonları */
+.poi-icon {
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  background: white;
+  border-radius: 50%;
+  text-align: center;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.poi-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 3px 7px rgba(0,0,0,0.4);
+}
+
+.poi-icon.cafe {
+  color: #9c6644;
+}
+
+.poi-icon.mall {
+  color: #8b5cf6;
+}
+
+.poi-icon.bar {
+  color: #a855f7;
+}
+
+/* POI Popup Stilleri */
+.interactive-popup .leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+}
+
+.poi-popup h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.poi-type {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.poi-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.poi-directions {
+  background-color: #3b82f6;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.poi-link {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.poi-link:hover, .poi-directions:hover {
+  text-decoration: underline;
+}
+
+.poi-website {
+  background-color: #10b981;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.poi-website:hover {
+  background-color: #059669;
+  text-decoration: none;
+}
+
+.poi-photo {
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Kategori butonları */
+.category-button:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s;
+}
+
+/* Mobil menü */
+.mobile-menu {
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-menu.closed {
+  transform: translateX(-100%);
+}
+
+/* Landing Page Stilleri */
+.landing-page {
+  min-height: 100vh;
+  background-color: #f0f7ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+  z-index: 0;
+}
+
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.globe-icon {
+  font-size: 1.8rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0056b3;
+  margin: 0;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s;
+  font-size: 0.9rem;
+}
+
+.main-nav ul li a:hover {
+  color: #0056b3;
+}
+
+.main-nav ul li a.active {
+  color: #0056b3;
+  font-weight: 600;
+}
+
+.start-exploring-btn {
+  background-color: #0056b3;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.start-exploring-btn:hover {
+  background-color: #003d82;
+}
+
+.landing-main {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a2b3e;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.search-container {
+  display: flex;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 1px solid #ddd;
+  border-radius: 50px 0 0 50px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-btn {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  padding: 0 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #003d82;
+}
+
+.stats-container {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0056b3;
+  margin: 0;
+}
+
+.stat-label {
+  margin: 0;
+  color: #666;
+}
+
+.explore-features-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0056b3;
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+
+.explore-features-link:hover {
+  gap: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .landing-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .main-nav ul {
+    gap: 1rem;
+  }
+  
+  .landing-main {
+    padding: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .stats-container {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .stat-item {
+    flex: 0 0 40%;
+  }
+}
+
+/* Mobil cihazlar için daha iyi destek */
+@media (max-width: 1024px) {
+  .main-nav {
+    display: none;
+  }
+} 

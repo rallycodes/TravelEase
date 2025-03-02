@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/TravelEase/static/css/main.5ae5a0e0.css",
+    "main.js": "/TravelEase/static/js/main.fa75a130.js",
+    "static/js/453.ee7616b9.chunk.js": "/TravelEase/static/js/453.ee7616b9.chunk.js",
+    "index.html": "/TravelEase/index.html",
+    "main.5ae5a0e0.css.map": "/TravelEase/static/css/main.5ae5a0e0.css.map",
+    "main.fa75a130.js.map": "/TravelEase/static/js/main.fa75a130.js.map",
+    "453.ee7616b9.chunk.js.map": "/TravelEase/static/js/453.ee7616b9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ae5a0e0.css",
+    "static/js/main.fa75a130.js"
+  ]
+}
