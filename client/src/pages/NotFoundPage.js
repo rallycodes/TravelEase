@@ -13,7 +13,7 @@ const NotFoundPage = () => {
         <h1 className="text-4xl font-bold text-gray-800 mb-4">Page Not Found</h1>
         
         <p className="text-xl text-gray-600 mb-8 max-w-md mx-auto">
-          It seems you've ventured off the TravelEase map. The page you're looking for doesn't exist or has been moved.
+          It seems you've ventured off the VisitEase map. The page you're looking for doesn't exist or has been moved.
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -36,4 +36,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage; 
+export default NotFoundPage;

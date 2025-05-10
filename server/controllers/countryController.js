@@ -77,6 +77,57 @@ exports.getCountryByName = async (req, res) => {
             cultureAndEvents: country.cultureAndEvents
           };
           break;
+        case 'deals-promotions':
+          result = {
+            name: country.name,
+            dealsAndPromotions: country.dealsAndPromotions
+          };
+          break;
+        case 'sim-communication':
+          result = {
+            name: country.name,
+            simCardAndCommunication: country.simCardAndCommunication
+          };
+          break;
+        case 'currency-exchange':
+          result = {
+            name: country.name,
+            currencyExchange: country.currencyExchange
+          };
+          
+          // Güncel döviz kuru bilgisini ekle
+          try {
+            const currencyRates = await getCurrencyRates(country.currency.code);
+            result.currentCurrencyRates = currencyRates;
+          } catch (currencyError) {
+            console.error('Döviz kuru verisi alınamadı:', currencyError);
+          }
+          
+          break;
+        case 'local-regulations':
+          result = {
+            name: country.name,
+            localRegulations: country.localRegulations
+          };
+          break;
+        case 'visa-immigration':
+          result = {
+            name: country.name,
+            visaAndImmigration: country.visaAndImmigration
+          };
+          break;
+        case 'regional-festivals':
+          result = {
+            name: country.name,
+            regionalFestivals: country.regionalFestivals
+          };
+          break;
+        case 'user-recommendations':
+          result = {
+            name: country.name,
+            userRecommendations: country.userRecommendations
+          };
+          break;
         default:
           // Kategori belirtilmemişse tüm veriyi döndür
           break;
@@ -140,4 +191,4 @@ exports.updateCountry = async (req, res) => {
   } catch (error) {
     res.status(400).json({ message: 'Ülke güncellenirken hata oluştu', error: error.message });
   }
-}; 
+};

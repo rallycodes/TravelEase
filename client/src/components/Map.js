@@ -16,7 +16,7 @@ const Map = ({ onCountrySelect, selectedCountry, className, activeFilter, onMapL
   const [isLoading, setIsLoading] = useState(true);
   
   // Seçilebilir ülkeler
-  const selectableCountries = ['Azerbaijan', 'United Kingdom'];
+  const selectableCountries = ['Azerbaijan', 'United Kingdom', 'Germany', 'Italy', 'Russia', 'United States', 'Japan', 'Turkey', 'Türkiye', 'Almanya'];
   
   // Ülke isimlerini standartlaştırma
   const normalizeCountryName = (name) => {
@@ -24,7 +24,9 @@ const Map = ({ onCountrySelect, selectedCountry, className, activeFilter, onMapL
       'England': 'United Kingdom',
       'Great Britain': 'United Kingdom',
       'UK': 'United Kingdom',
-      'Britain': 'United Kingdom'
+      'Britain': 'United Kingdom',
+      'Türkiye': 'Turkey',
+      'Almanya': 'Germany'
     };
     
     return nameMap[name] || name;
@@ -173,4 +175,4 @@ const Map = ({ onCountrySelect, selectedCountry, className, activeFilter, onMapL
   );
 };
 
-export default Map; 
+export default Map;

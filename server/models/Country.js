@@ -93,6 +93,140 @@ const countrySchema = new mongoose.Schema({
       entryFee: String
     }]
   },
+  dealsAndPromotions: {
+    flightDeals: [{
+      title: String,
+      description: String,
+      provider: String,
+      discountPercentage: Number,
+      validUntil: Date,
+      affiliateLink: String
+    }],
+    restaurantDiscounts: [{
+      restaurantName: String,
+      description: String,
+      discountPercentage: Number,
+      validUntil: Date,
+      affiliateLink: String
+    }],
+    cityPasses: [{
+      name: String,
+      description: String,
+      price: String,
+      validityPeriod: String,
+      inclusions: [String],
+      affiliateLink: String
+    }],
+    couponCodes: [{
+      code: String,
+      description: String,
+      validFor: String,
+      validUntil: Date,
+      affiliateLink: String
+    }]
+  },
+  simCardAndCommunication: {
+    localOperators: [{
+      name: String,
+      description: String,
+      coverage: String,
+      websiteUrl: String
+    }],
+    purchaseLocations: [String],
+    touristPlans: [{
+      operatorName: String,
+      planName: String,
+      data: String,
+      validity: String,
+      price: String,
+      features: [String]
+    }],
+    airportPurchaseInfo: String,
+    internetCoverage: String
+  },
+  currencyExchange: {
+    recommendedExchangeLocations: [{
+      name: String,
+      type: String, // bank, exchange office, etc.
+      location: String,
+      rateQuality: String, // good, average, poor
+      notes: String
+    }],
+    atmInfo: {
+      commonBanks: [String],
+      commissionRates: String,
+      withdrawalLimits: String,
+      securityTips: String
+    },
+    cardPaymentInfo: {
+      acceptance: String, // widespread, limited, etc.
+      commonCardTypes: [String],
+      foreignTransactionFees: String,
+      tips: String
+    },
+    cashHandlingTips: String
+  },
+  localRegulations: {
+    alcoholRules: String,
+    smokingRules: String,
+    dressCodes: String,
+    photographyRestrictions: String,
+    importRestrictions: String,
+    culturalEtiquette: [{
+      situation: String,
+      doThis: String,
+      avoidThis: String
+    }],
+    commonMistakes: [{
+      mistake: String,
+      consequence: String,
+      howToAvoid: String
+    }]
+  },
+  visaAndImmigration: {
+    visaTypes: [{
+      type: String,
+      eligibility: String,
+      duration: String,
+      cost: String,
+      processingTime: String
+    }],
+    applicationProcess: {
+      steps: [String],
+      requiredDocuments: [String],
+      whereToApply: String,
+      onlineApplication: String
+    },
+    extensionProcess: String,
+    specialConditions: {
+      workPermits: String,
+      residencePermits: String,
+      studentVisas: String
+    },
+    entryRequirements: String
+  },
+  regionalFestivals: [{
+    name: String,
+    type: String, // cultural, music, food, etc.
+    date: String,
+    location: String,
+    description: String,
+    ticketInfo: String,
+    localSignificance: String,
+    touristExperience: String,
+    photos: [String]
+  }],
+  userRecommendations: [{
+    userNickname: String,
+    date: Date,
+    rating: Number,
+    title: String,
+    content: String,
+    category: String, // attraction, restaurant, etc.
+    helpfulCount: Number,
+    photos: [String],
+    tips: [String]
+  }],
   createdAt: {
     type: Date,
     default: Date.now
@@ -109,4 +243,4 @@ countrySchema.pre('save', function(next) {
   next();
 });
 
-module.exports = mongoose.model('Country', countrySchema); 
+module.exports = mongoose.model('Country', countrySchema);

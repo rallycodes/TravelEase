@@ -11,12 +11,12 @@ const AboutPage = () => {
         </Link>
         
         <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">About TravelEase</h1>
+          <h1 className="text-3xl font-bold text-gray-800 mb-4">About VisitEase</h1>
           
           <div className="mb-8">
             <h2 className="text-xl font-semibold text-gray-700 mb-3">Our Mission</h2>
             <p className="text-gray-600 mb-4">
-              TravelEase is dedicated to making travel planning easier and more enjoyable. 
+              VisitEase is dedicated to making travel planning easier and more enjoyable. 
               We provide interactive maps, local insights, and practical information to help 
               travelers explore new destinations with confidence.
             </p>
@@ -41,7 +41,7 @@ const AboutPage = () => {
           <div className="mb-8">
             <h2 className="text-xl font-semibold text-gray-700 mb-3">Our Team</h2>
             <p className="text-gray-600 mb-4">
-              TravelEase was founded by a team of passionate travelers and technology enthusiasts 
+              VisitEase was founded by a team of passionate travelers and technology enthusiasts 
               who wanted to create the travel planning tool they always wished existed.
             </p>
             <p className="text-gray-600">
@@ -66,4 +66,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage; 
+export default AboutPage;

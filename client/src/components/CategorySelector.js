@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUtensils, FaCar, FaLandmark, FaHotel, FaInfoCircle } from 'react-icons/fa';
+import { FaUtensils, FaCar, FaLandmark, FaHotel, FaInfoCircle, FaPercent, FaMobileAlt, FaExchangeAlt, FaBalanceScale, FaPassport, FaCalendarAlt, FaComments } from 'react-icons/fa';
 
 const CategorySelector = ({ onCategorySelect, activeCategory }) => {
   const categories = [
@@ -7,12 +7,19 @@ const CategorySelector = ({ onCategorySelect, activeCategory }) => {
     { id: 'food', icon: <FaUtensils />, name: 'Food & Drink' },
     { id: 'transport', icon: <FaCar />, name: 'Transportation' },
     { id: 'culture', icon: <FaLandmark />, name: 'Culture & Events' },
-    { id: 'stays', icon: <FaHotel />, name: 'Places to Stay' }
+    { id: 'stays', icon: <FaHotel />, name: 'Places to Stay' },
+    { id: 'deals', icon: <FaPercent />, name: 'Deals & Promotions' },
+    { id: 'sim', icon: <FaMobileAlt />, name: 'SIM & Communication' },
+    { id: 'currency', icon: <FaExchangeAlt />, name: 'Currency Exchange' },
+    { id: 'regulations', icon: <FaBalanceScale />, name: 'Local Regulations' },
+    { id: 'visa', icon: <FaPassport />, name: 'Visa & Immigration' },
+    { id: 'festivals', icon: <FaCalendarAlt />, name: 'Regional Festivals' },
+    { id: 'recommendations', icon: <FaComments />, name: 'User Recommendations' }
   ];
 
   return (
     <div className="category-selector bg-white rounded-lg shadow-sm p-3 mb-4">
-      <div className="grid grid-cols-5 gap-2">
+      <div className="grid grid-cols-4 md:grid-cols-6 gap-2">
         {categories.map(category => (
           <button
             key={category.id}
@@ -32,4 +39,4 @@ const CategorySelector = ({ onCategorySelect, activeCategory }) => {
   );
 };
 
-export default CategorySelector; 
+export default CategorySelector;

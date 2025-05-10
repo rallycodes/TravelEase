@@ -15,7 +15,7 @@ const HomePage = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
               <FaGlobe className="text-blue-600 text-2xl" />
-              <span className="text-xl font-bold text-gray-800">TravelEase</span>
+              <span className="text-xl font-bold text-gray-800">VisitEase</span>
             </Link>
             
             {/* Desktop Navigation */}
@@ -76,9 +76,9 @@ const HomePage = () => {
         {/* Hero Section */}
         <section className="bg-blue-600 text-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Discover the world with TravelEase</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Discover the world with VisitEase</h1>
             <p className="text-lg text-gray-600 mb-6">
-              TravelEase helps you explore destinations with interactive maps, local recommendations, and cultural insights.
+              VisitEase helps you explore destinations with interactive maps, local recommendations, and cultural insights.
             </p>
             <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
               <Link 
@@ -178,7 +178,7 @@ const HomePage = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-bold mb-4">TravelEase</h3>
+              <h3 className="text-lg font-bold mb-4">VisitEase</h3>
               <p className="text-gray-400">Your interactive guide to exploring the world's most fascinating destinations.</p>
             </div>
             
@@ -213,7 +213,7 @@ const HomePage = () => {
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} TravelEase. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} VisitEase. All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -221,4 +221,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage; 
+export default HomePage;

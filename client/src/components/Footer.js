@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <FaGlobe className="text-blue-400 text-2xl" />
-              <span className="text-xl font-bold">TravelEase</span>
+              <span className="text-xl font-bold">VisitEase</span>
             </div>
             <p className="text-gray-400 text-sm">
               Your interactive guide to exploring the world's most fascinating destinations.
@@ -68,11 +68,11 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-          <p className="text-sm">&copy; {new Date().getFullYear()} TravelEase. All rights reserved.</p>
+          <p className="text-sm">&copy; {new Date().getFullYear()} VisitEase. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 };
 
-export default Footer; 
+export default Footer;

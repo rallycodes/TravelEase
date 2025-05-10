@@ -9,7 +9,7 @@ const LandingPage = () => {
       <header className="landing-header">
         <div className="logo-container">
           <div className="globe-icon">🌐</div>
-          <h1 className="logo-text">TravelEase</h1>
+          <h1 className="logo-text">VisitEase</h1>
         </div>
         <nav className="main-nav">
           <ul>
@@ -75,4 +75,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage; 
+export default LandingPage;

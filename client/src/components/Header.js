@@ -19,7 +19,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <FaGlobe className="text-blue-600 text-2xl" />
-            <span className="text-xl font-bold text-gray-800">TravelEase</span>
+            <span className="text-xl font-bold text-gray-800">VisitEase</span>
           </Link>
           
           {/* Desktop Navigation */}
@@ -129,4 +129,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;
